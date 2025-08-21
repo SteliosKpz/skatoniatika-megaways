@@ -1,4 +1,7 @@
-<div class="h-full grid grid-cols-12 grid-rows-12 justify-center">
+<div
+  class="h-full grid grid-cols-12 grid-rows-12 justify-center text-cyan-600 text-shadow-blue-400"
+  style="background: linear-gradient(to right, #0f0c29, #302b63, #24243e)"
+>
   <div class="text-8xl max-md:text-4xl col-span-12 row-start-1 text-center">
     Skatoniatika Megaways
   </div>
@@ -6,30 +9,29 @@
     Wins:{{ winCounter }} Losses:{{ lossCounter }}
   </div>
   <div
-    class="grid grid-cols-12 row-span-8 row-start-3 col-start-5 col-span-4 max-md:col-start-2 max-md:col-span-10"
+    class="grid grid-cols-12 row-start-3 col-start-5 col-span-4 max-md:col-start-2 max-md:col-span-10 min-h-[450px] max-h-[450px]"
   >
     @for(reel of reels;track $index;let i=$index){
     <div
-      class="bg-amber-300 col-span-4 h-full overflow-hidden relative max-h-[800px] ml-1"
+      class="bg-cyan-600 col-span-4 h-full overflow-hidden relative ml-1 min-h-[450px] max-h-[450px] gradient-border"
     >
       <div
         #reels
         class="grid grid-cols-12 absolute w-full transition-transform duration-200 ease-out"
-        [style.transform]="'translateY(' + -reel.position + 'px)'"
       >
         @for(reelItem of reel.reelItems;track $index){
         <div
-          class="w-full col-span-12 text-9xl flex justify-center items-center h-[154px]"
+          class="w-full col-span-12 row-span-4 flex justify-center items-center"
           [class]="{ 'reel-spinning': reel.isSpinning }"
         >
-          <img class="h-[154px] w-full" [src]="reelItem" alt="" />
+          <img class="w-full h-[150px] object-cover" [src]="reelItem" alt="" />
         </div>
         }
       </div>
     </div>
     }
   </div>
-  <div class="col-span-4 col-start-5 row-start-11 text-center mt-4">
+  <div class="col-span-4 col-start-5 mt-4 row-start-11 text-center mt-4">
     <button (click)="spin()" class="w-[100%]">Γύρνα το μπουρδέλο</button>
   </div>
 </div>

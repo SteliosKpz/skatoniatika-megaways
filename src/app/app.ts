@@ -43,7 +43,7 @@ export class App implements OnInit {
 
   fillReels() {
     this.reels.forEach((reel) => {
-      for (let i = 0; i < 9; i++) {
+      for (let i = 0; i < 3; i++) {
         reel.reelItems.push(
           `/assets/item-${Math.floor(Math.random() * 9)}.webp`
         );
