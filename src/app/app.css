@@ -2,16 +2,9 @@
   filter: blur(4px);
   animation: spin-reel 0.11s linear infinite;
 }
-.gradient-border {
+.gradient-border1 {
   border: 2px solid;
-  border-image: linear-gradient(
-      92.88deg,
-      #455eb5 9.16%,
-      #5643cc 43.89%,
-      #0092b8 64.72%
-    )
-    1;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 button {
   background-image: linear-gradient(
